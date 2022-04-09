@@ -11,9 +11,13 @@ body {
     font-family: 'Roboto',sans-serif;
 }
 
-/* Прибираю точки зі списків */
+/* Прибираю точки зі списків і підкреслення з посилань */
 ul {
     list-style: none;
+}
+
+a {
+text-decoration: none;
 }
 
 /* Стилізація шапки сторінки */
@@ -22,13 +26,18 @@ ul {
     background-color: #ECECEC;
 }
 
-.logo {
+.header-logo {
     color: #000000;
+}
+
+.header-logo,
+.down-logo {
     font-family: 'Raleway';
     font-style: normal;
     font-weight: 700;
     font-size: 26px;
     line-height: 1.19;
+    letter-spacing: 0.03em;
 }
 
 .logo-part {
@@ -37,64 +46,30 @@ ul {
 
 .menu-link {
     color: var(--title-text-color);
+}
+
+.contact-info {
+    color: var(--primary-text-color);
+}
+
+.menu-link, 
+.contact-info {
     font-style: normal;
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.02em;
-}
-
-.menu-link:hover,
-.menu-link:focus {
-    color: var(--accent-color);
 }
 
 .menu-link-current {
     color: var(--accent-color);
 }
 
-.contact-info {
-    color: var(--primary-text-color);
-    font-style: normal;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 1.14;
-    letter-spacing: 0.02em;
-}
-
+.menu-link:hover,
+.menu-link:focus,
 .contact-info:hover,
 .contact-info:focus {
     color: var(--accent-color);
-}
-
-/* ПІДВАЛ */
-
-.footer {
-    background-color: #2F303A;
-}
-
-.down-logo {
-    color: #FFFFFF;
-    font-family: 'Raleway';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 26px;
-    line-height: 1.19;
-    letter-spacing: 0.03em;
-}
-
-.place {
-    color: #FFFFFF;
-    font-size: 14px;
-    line-height: 1.71;
-    letter-spacing: 0.03em;
-}
-
-.contact-item {
-    color: rgba(255, 255, 255, 0.6);
-    font-size: 14px;
-    line-height: 1.71;
-    letter-spacing: 0.03em;
 }
 
 /* СТУДИЯ СТИЛІЗАЦІЯ ОСНОВНОГО КОНТЕНТУ */
@@ -102,8 +77,11 @@ ul {
 /* Стилі для героя */
 
 .hero {
-    color: #ffffff;
     background-color: #2F303A;
+}
+
+.hero-title {
+    color: #ffffff;
     font-weight: 900;
     font-size: 44px;
     line-height: 1.36;
@@ -122,7 +100,7 @@ ul {
     align-items: center;
     text-align: center;
     letter-spacing: 0.06em;
-
+    cursor: pointer;
 }
 
 /* Особливості роботи */
@@ -142,21 +120,8 @@ ul {
     line-height: 1.71;
     letter-spacing: 0.03em;
 }
-
-.section-image {
-    color: var(--title-text-color);
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 1.17;
-    text-align: center;
-    letter-spacing: 0.03em;
-}
-
 /* Робітники */
-.workers {
-    background-color: #F5F4FA;
-}
-
+.section-image,
 .section-staff {
     color: var(--title-text-color);
     font-weight: 700;
@@ -166,6 +131,10 @@ ul {
     letter-spacing: 0.03em;
 }
 
+.workers {
+    background-color: #F5F4FA;
+}
+
 .worker-card {
     background: #ffffff;
 }
@@ -173,16 +142,40 @@ ul {
 .name-list {
     color: var(--title-text-color);
     font-weight: 500;
+}
+.name-list,
+.proff {
     font-size: 16px;
     line-height: 1.19;
     text-align: center;
     letter-spacing: 0.03em;
 }
 
-.proff {
-    font-size: 16px;
-    line-height: 1.19;
-    text-align: center;
+/* ПІДВАЛ */
+
+address {
+    font-style: normal;
+}
+
+.footer {
+    background-color: #2F303A;
+}
+
+.down-logo {
+    color: #FFFFFF;
+}
+
+.place {
+    color: #FFFFFF;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+}
+
+.contact-item {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 14px;
+    line-height: 1.71;
     letter-spacing: 0.03em;
 }
 
@@ -193,12 +186,19 @@ ul {
     cursor: pointer;
 }
 
+.filter:hover,
+.filter:focus,
+.filter:active {
+    color:#ffffff;
+    background-color: #2196F3;
+}
+
 .poster {
     background-color: #EEEEEE;
 }
 
 .poster-name {
-    color: #212121;
+    color: var(--title-text-color);
     font-weight: 700;
     font-size: 18px;
     line-height: 2;
@@ -206,7 +206,7 @@ ul {
 }
 
 .poster-category {
-    color: #757575;
+    color: var(--primary-text-color);
     font-size: 16px;
     line-height: 1.88;
     letter-spacing: 0.03em;
